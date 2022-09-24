@@ -1,0 +1,47 @@
+{
+  "name": "detect-autoplay",
+  "version": "0.0.1",
+  "main": "dist/index.min.js",
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "sideEffects": false,
+  "authors": "oyuyue <oyuyue@outlook.com>",
+  "repository": "git@github.com:web-streaming/detect-autoplay.git",
+  "homepage": "https://github.com/web-streaming/detect-autoplay",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "lib"
+  ],
+  "keywords": [
+    "player",
+    "autoplay",
+    "detect"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite demo",
+    "build": "vite build && BUILD_TYPE=es vite build && tsc",
+    "release": "node ./scripts/release.js",
+    "lint": "eslint src/**/*.ts --fix"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.9",
+    "@babel/preset-env": "^7.18.9",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "enquirer": "^2.3.6",
+    "eslint": "^8.20.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "execa": "^5.1.0",
+    "semver": "^7.3.7",
+    "terser": "^5.14.2",
+    "typescript": "^4.7.4",
+    "vite": "^3.0.3"
+  }
+}
