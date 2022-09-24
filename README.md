@@ -1,8 +1,11 @@
 # DetectAutoplay
 
+[![npm version](https://img.shields.io/npm/v/detect-autoplay?logo=npm)](https://github.com/web-streaming/detect-autoplay) 
+[![npm version](https://img.badgesize.io/https:/unpkg.com/detect-autoplay/dist/index.min.js?compression=gzip)](https://github.com/web-streaming/detect-autoplay) 
+
 Modern browsers do not support autoplay with sound unless the user or browser autoplay algorithm allows it. see https://developer.chrome.com/blog/autoplay/ .
 
-This npm package will detect if the current website is allowed to autoplay audio and video.
+This npm package will detect if the current website is allowed to autoplay audio and video. And gzip size is only 833B.
 
 If you like this repo, please give it a star ⭐️.
 

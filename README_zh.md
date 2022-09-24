@@ -1,8 +1,11 @@
 # DetectAutoplay
 
+[![npm version](https://img.shields.io/npm/v/detect-autoplay?logo=npm)](https://github.com/web-streaming/detect-autoplay) 
+[![npm version](https://img.badgesize.io/https:/unpkg.com/detect-autoplay/dist/index.min.js?compression=gzip)](https://github.com/web-streaming/detect-autoplay) 
+
 现代浏览器不允许带声音的自动播放音视频，除非用户允许或者当前网站被浏览器自动播放算法允许。详情请查看 https://developer.chrome.com/blog/autoplay/ 。
 
-这个 npm 包将自动检测当前网站是否被允许带声音的自动播放音视频。
+这个 npm 包将自动检测当前网站是否被允许带声音的自动播放音视频。gzip 大小仅有 833B。
 
 如果你觉的这个仓库不错，请点一个 star ⭐️。
 
