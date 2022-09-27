@@ -35,19 +35,18 @@ import { detectAutoplay } from 'detect-autoplay'
 const video = document.createElement('video')
 video.src = 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4'
 video.playsInline = true
+video.preload = 'auto'
 video.load()
 document.body.appendChild(video)
 
 detectAutoplay().then((canAutoplay) => {
   if (canAutoplay) {
     // 当前网站被允许带声音的自动播放
-    video.play()
   } else {
     // 当前网站被禁止带声音的自动播放
 
     // 视频只能够静音才能自动播放
     video.muted = true
-    video.play()
 
     // 给用户展示一个取消静音的按钮
     const btn = document.createElement('button')
@@ -55,6 +54,9 @@ detectAutoplay().then((canAutoplay) => {
     btn.onclick = () => video.muted = false
     document.body.appendChild(btn)
   }
+  
+  video.autoplay = true
+  video.play()
 })
 ```
 
