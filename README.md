@@ -35,19 +35,18 @@ import { detectAutoplay } from 'detect-autoplay'
 const video = document.createElement('video')
 video.src = 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4'
 video.playsInline = true
+video.preload = 'auto'
 video.load()
 document.body.appendChild(video)
 
 detectAutoplay().then((canAutoplay) => {
   if (canAutoplay) {
     // current website allows autoplay with sound
-    video.play()
   } else {
     // current website does not allow autoplay with sound
 
     // video can only be muted to autoplay
     video.muted = true
-    video.play()
 
     // show a button to unmute
     const btn = document.createElement('button')
@@ -55,6 +54,9 @@ detectAutoplay().then((canAutoplay) => {
     btn.onclick = () => video.muted = false
     document.body.appendChild(btn)
   }
+
+  video.autoplay = true
+  video.play()
 })
 ```
 
